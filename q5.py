@@ -8,7 +8,8 @@ t = np.arange(len(x))
 # (a) Maximum, Window Size: 3, Overlap: 1
 max_windows = []
 max_positions = []
-for i in range(0, len(x) - 2, 1):
+for i in range(0, len(x) - 2, 2):
+    print(i)
     window = x[i:i+3]
     max_windows.append(max(window))
     max_positions.append(i+1)
@@ -26,8 +27,9 @@ med_windows = []
 mean_windows = []
 med_positions = []
 mean_positions = []
-for i in range(0, len(x) - 4, 2):
+for i in range(0, len(x) - 4, 3):
     window = x[i:i+5]
+    print(window)
     med_windows.append(np.median(window))
     mean_windows.append(np.mean(window))
     med_positions.append(i+2)
